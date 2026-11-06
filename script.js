@@ -94,6 +94,31 @@ const LEVELS = [
       [7, 3],
     ],
   },
+  {
+    id: 4,
+    name: "Level 4",
+    difficulty: "Hard",
+    boardSize: 7,
+    blurb: "A 7×7 board. The right edge gives the first color away.",
+    regions: [
+      [0, 0, 0, 0, 0, 0, 0],
+      [3, 0, 0, 2, 2, 2, 1],
+      [3, 0, 0, 2, 2, 2, 1],
+      [3, 3, 2, 2, 2, 2, 1],
+      [5, 3, 3, 3, 4, 4, 6],
+      [5, 3, 3, 4, 4, 4, 6],
+      [5, 5, 4, 4, 4, 6, 6],
+    ],
+    eggplants: [
+      [0, 2],
+      [1, 6],
+      [2, 3],
+      [3, 1],
+      [4, 4],
+      [5, 0],
+      [6, 5],
+    ],
+  },
 ];
 
 const EggplantArt = {

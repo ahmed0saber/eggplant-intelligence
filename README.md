@@ -32,6 +32,7 @@ Every level follows the same rules:
 | 1 | The Beginning | Easy | 5×5 |
 | 2 | The Challenge | Medium | 6×6 |
 | 3 | The Expert | Expert | 8×8 |
+| 4 | Level 4 | Hard | 7×7 |
 
 Level 1 is unlocked at the start. Finishing a level unlocks the next one. Losing all 3 lives does not. Cleared levels can be replayed.
 
@@ -42,6 +43,6 @@ Progress is stored in the browser under the key `eggplant-intelligence-progress-
 - `index.html` — page structure
 - `style.css` — layout, colors, and motion
 - `script.js` — rules, levels, and game flow
-- `how-to-win.md` — spoiler walkthrough for all three levels
+- `how-to-win.md` — spoiler walkthrough for every level
 
 The eggplant graphic is the `🍆` character, drawn in one place in `script.js` (`EggplantArt.create`) so it can later be swapped for an SVG.

@@ -80,3 +80,29 @@ Uncover the last cell of each remaining row:
 17. **Row 6, column 6** — lilac.
 18. **Row 7, column 8** — coral.
 19. **Row 8, column 4** — green.
+
+## Level 4
+
+Gold fills the top row and also sits in rows 2 and 3. Blue is the short strip on the right of rows 2, 3, and 4. Rose is the block in the upper middle. Teal runs down the left and into the lower middle. Lilac is the lower-left corner. Butter is the block at the lower right. Green is the bottom-right corner.
+
+1. Blue exists only in column 7. Mark the other cells in column 7.
+2. Green is now the single cell in row 7, column 6. Mark the rest of row 7, and mark the rest of column 6.
+3. Row 1 is entirely gold, and gold continues below it. Mark every gold cell outside row 1.
+4. Uncover **row 7, column 6**. It is green, the last cell in row 7.
+5. Lilac is now only in column 1. Mark the other cells in column 1.
+
+Row 2 is down to rose in columns 4 and 5, and blue in column 7.
+
+6. Gold in row 1, column 4 forces blue into row 2, column 7, rose into row 3, column 5, and teal into row 4, column 2. The rose clears the butter in column 5, and the teal touches the last lilac in row 5. Row 5 is empty. Mark that gold cell.
+7. Gold in row 1, column 5 is the same column as the butter in row 5. It also forces blue into row 2, column 7, rose into row 3, column 4, and teal into row 4, column 2, which removes the lilac and teal cells left in row 5. Mark that gold cell.
+8. Rose in row 2, column 4 forces gold into row 1, column 2. That gold clears the teal in column 2, so blue is forced into row 3, column 7 and row 4 disappears. Mark that rose cell.
+9. Rose in row 2, column 5 clears the butter in that column. Blue is forced into row 3, column 7, then teal into row 4, column 2, which removes every cell left in row 5. Mark that rose cell.
+10. Uncover **row 2, column 7**. It is blue, the last cell in row 2.
+
+Row 3 is now only rose, so mark every rose cell outside row 3. Row 4 is now only teal, so mark every teal cell outside row 4. Column 3 is now only gold, so mark the gold cell in row 1, column 2.
+
+11. Uncover **row 1, column 3**. It is gold.
+12. Uncover **row 4, column 2**. It is teal, and it touches the lilac in row 5, column 1. Row 5 is only butter.
+13. Uncover **row 5, column 5**. It is butter. It clears the rose in column 5 and the butter it touches in row 6.
+14. Uncover **row 3, column 4**. It is rose, the last cell in row 3.
+15. Uncover **row 6, column 1**. It is lilac, the last cell in row 6.
