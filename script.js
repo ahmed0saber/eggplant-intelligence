@@ -121,13 +121,23 @@ const LEVELS = [
   },
 ];
 
+const Icons = {
+  use(id, viewBox) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "icon");
+    svg.setAttribute("viewBox", viewBox);
+    svg.setAttribute("aria-hidden", "true");
+    const use = document.createElementNS("http://www.w3.org/2000/svg", "use");
+    use.setAttribute("href", `#${id}`);
+    svg.append(use);
+    return svg;
+  },
+};
+
 const EggplantArt = {
-  glyph: "🍆",
   create() {
-    const art = document.createElement("span");
-    art.className = "eggplant-art";
-    art.setAttribute("aria-hidden", "true");
-    art.textContent = this.glyph;
+    const art = Icons.use("icon-eggplant", "0 0 128 128");
+    art.classList.add("eggplant-art");
     return art;
   },
 };
@@ -677,7 +687,7 @@ class UIManager {
     for (let index = 0; index < STARTING_LIVES; index += 1) {
       const heart = document.createElement("span");
       heart.className = "heart";
-      heart.textContent = "❤️";
+      heart.append(Icons.use("icon-heart", "0 0 128 128"));
       if (index >= lives) heart.classList.add("is-spent");
       if (justLost && index === lives) heart.classList.add("is-breaking");
       this.livesEl.append(heart);
@@ -756,10 +766,16 @@ class UIManager {
 
   fillConfetti(host) {
     host.replaceChildren();
-    const pieces = ["🍆", "✦", "●", "♥"];
+    const pieces = [
+      ["icon-eggplant", "0 0 128 128"],
+      ["icon-star", "0 0 128 128"],
+      ["icon-dot", "0 0 128 128"],
+      ["icon-heart", "0 0 128 128"],
+    ];
     for (let index = 0; index < 16; index += 1) {
+      const [id, viewBox] = pieces[index % pieces.length];
       const piece = document.createElement("span");
-      piece.textContent = pieces[index % pieces.length];
+      piece.append(Icons.use(id, viewBox));
       piece.style.left = `${6 + (index * 5.7) % 88}%`;
       piece.style.animationDelay = `${(index % 6) * 0.05}s`;
       host.append(piece);

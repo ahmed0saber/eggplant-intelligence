@@ -84,7 +84,6 @@ button { cursor: pointer; }
   border-radius: 18px;
   background: #fffdf8;
   box-shadow: var(--shadow);
-  font-size: 32px;
 }
 
 .eyebrow {
@@ -265,20 +264,34 @@ h1 {
 
 .hud-card .pill { margin-top: 6px; }
 
+.icon-sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icon { display: block; }
+
+.brand-mark .icon { width: 40px; height: 40px; }
+
 .lives {
   display: flex;
-  gap: 4px;
+  gap: 6px;
   min-height: 1.8rem;
-  font-size: 1.45rem;
-  line-height: 1;
+  align-items: center;
 }
 
 .lives.is-shaking { animation: lives-shake 0.4s ease; }
 
 .heart {
-  display: inline-block;
+  display: block;
+  width: 22px;
+  height: 22px;
   transform-origin: center;
 }
+
+.heart .icon { width: 100%; height: 100%; }
 
 .heart.is-spent {
   filter: grayscale(1);
@@ -379,8 +392,8 @@ h1 {
 }
 
 .eggplant-art {
-  display: inline-block;
-  font-size: 1.05em;
+  width: 86%;
+  height: 86%;
   filter: drop-shadow(0 2px 0 rgba(60, 20, 40, 0.12));
   pointer-events: none;
 }
@@ -615,8 +628,12 @@ h1 {
 .confetti span {
   position: absolute;
   top: -12%;
+  width: 22px;
+  height: 22px;
   animation: confetti-fall 1.1s ease-in forwards;
 }
+
+.confetti .icon { width: 22px; height: 22px; }
 
 .tone-0 { background-color: #f7b7c8; }
 .tone-1 { background-color: #f6d48b; }
@@ -698,7 +715,8 @@ h1 {
 
 @media (max-width: 640px) {
   .topbar { align-items: center; }
-  .brand-mark { width: 46px; height: 46px; font-size: 26px; border-radius: 14px; }
+  .brand-mark { width: 46px; height: 46px; border-radius: 14px; }
+  .brand-mark .icon { width: 32px; height: 32px; }
   .eyebrow { display: none; }
   h1 { font-size: 1.35rem; }
   #help-button { white-space: nowrap; padding: 0.6rem 0.8rem; }

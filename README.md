@@ -41,8 +41,9 @@ Progress is stored in the browser under the key `eggplant-intelligence-progress-
 ## Files
 
 - `index.html` — page structure
+- `favicon.ico` — browser icon
 - `style.css` — layout, colors, and motion
 - `script.js` — rules, levels, and game flow
 - `how-to-win.md` — spoiler walkthrough for every level
 
-The eggplant graphic is the `🍆` character, drawn in one place in `script.js` (`EggplantArt.create`) so it can later be swapped for an SVG.
+The eggplant, hearts, star, and circle are the Android Noto Color Emoji drawings, embedded as SVG in `index.html` so they look the same on every device. The top bar uses that eggplant. The browser icon is `favicon.ico`.
