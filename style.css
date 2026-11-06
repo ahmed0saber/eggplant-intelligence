@@ -49,6 +49,25 @@ button { cursor: pointer; }
   margin-bottom: 28px;
 }
 
+.site-footer {
+  margin-top: 36px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
+.site-footer p { margin: 0; }
+
+.site-footer a {
+  color: var(--violet);
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.site-footer a:hover { text-decoration: underline; }
+
 .brand {
   display: flex;
   align-items: center;
